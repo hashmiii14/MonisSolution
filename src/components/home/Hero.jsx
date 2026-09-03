@@ -16,7 +16,10 @@ const lineVariant = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-end overflow-hidden" data-testid="hero">
+    <section
+      className="relative flex min-h-screen flex-col justify-end overflow-hidden pt-28 sm:pt-32 md:pt-36"
+      data-testid="hero"
+    >
       {/* High-performance GPU-composited background without scroll lag */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img
@@ -25,15 +28,15 @@ export default function Hero() {
           fetchPriority="high"
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/35 to-black/20" />
       </div>
 
-      <div className="luxe-container relative z-10 w-full pb-16 md:pb-24">
+      <div className="luxe-container relative z-10 w-full pb-12 sm:pb-16 md:pb-20">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="overline mb-6 text-luxe-gold"
+          className="overline mb-4 sm:mb-5 text-luxe-gold font-medium tracking-[0.2em]"
         >
           Monis Solution — Sector 44, Gurugram · New Delhi NCR
         </motion.p>
