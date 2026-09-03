@@ -75,7 +75,7 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-12">
           {/* Card 1 — Large feature */}
           <Reveal className="group relative overflow-hidden bg-luxe-charcoal md:col-span-3 lg:col-span-7">
-            <Link to={`/services/${featuredServices[0]?.slug}`} className="block">
+            <Link to={`/services#${featuredServices[0]?.slug}`} className="block">
               <div className="aspect-[16/11] overflow-hidden">
                 <img
                   src={featuredServices[0]?.image}
@@ -88,14 +88,14 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <p className="overline mb-2 text-luxe-gold">01 / Residential</p>
                 <h3 className="font-display text-2xl md:text-3xl">{featuredServices[0]?.title}</h3>
-                <p className="mt-2 line-clamp-2 text-sm text-white/70">{featuredServices[0]?.shortDesc}</p>
+                <p className="mt-2 line-clamp-2 text-sm text-white/70">{featuredServices[0]?.excerpt}</p>
               </div>
             </Link>
           </Reveal>
 
           {/* Card 2 */}
           <Reveal delay={0.1} className="group relative overflow-hidden bg-luxe-charcoal md:col-span-3 lg:col-span-5">
-            <Link to={`/services/${featuredServices[1]?.slug}`} className="block">
+            <Link to={`/services#${featuredServices[1]?.slug}`} className="block">
               <div className="aspect-[16/11] overflow-hidden lg:aspect-auto lg:h-[460px]">
                 <img
                   src={featuredServices[1]?.image}
@@ -108,7 +108,7 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <p className="overline mb-2 text-luxe-gold">02 / Commercial</p>
                 <h3 className="font-display text-2xl">{featuredServices[1]?.title}</h3>
-                <p className="mt-2 line-clamp-2 text-sm text-white/70">{featuredServices[1]?.shortDesc}</p>
+                <p className="mt-2 line-clamp-2 text-sm text-white/70">{featuredServices[1]?.excerpt}</p>
               </div>
             </Link>
           </Reveal>
@@ -116,7 +116,7 @@ export default function Home() {
           {/* Cards 3, 4, 5 — bottom trio */}
           {featuredServices.slice(2, 5).map((s, i) => (
             <Reveal key={s.slug} delay={0.1 * (i + 2)} className="group relative overflow-hidden bg-luxe-charcoal md:col-span-1 lg:col-span-4">
-              <Link to={`/services/${s.slug}`} className="block">
+              <Link to={`/services#${s.slug}`} className="block">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={s.image}
@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <p className="overline mb-1 text-luxe-gold">0{i + 3} / {s.category}</p>
+                  <p className="overline mb-1 text-luxe-gold">0{i + 3} / Architectural</p>
                   <h3 className="font-display text-xl">{s.title}</h3>
                 </div>
               </Link>

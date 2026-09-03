@@ -56,6 +56,7 @@ function AnimatedRoutes() {
           <Route index element={<Page><Home /></Page>} />
           <Route path="about" element={<Page><Suspense fallback={<RouteFallback />}><About /></Suspense></Page>} />
           <Route path="services" element={<Page><Suspense fallback={<RouteFallback />}><Services /></Suspense></Page>} />
+          <Route path="services/:slug" element={<Navigate to="/services" replace />} />
           <Route path="portfolio" element={<Navigate to="/services" replace />} />
           <Route path="portfolio/:slug" element={<Navigate to="/services" replace />} />
           <Route path="team" element={<Navigate to="/about" replace />} />

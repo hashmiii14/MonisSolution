@@ -18,6 +18,10 @@ export const IMAGES = {
   studio2: img("1600566753086-00f18fb6b3ea", 900),
   studio3: img("1493809842364-78817add7ffb", 900),
   studio4: img("1524758631624-e2822e304c36", 900),
+  detail1: img("1600585154340-be6161a56a0c", 900),
+  detail2: img("1556909212-d5b604d0c90d", 900),
+  detail3: img("1524758631624-e2822e304c36", 900),
+  detail4: img("1616486338812-3dadae4b4ace", 900),
   cta: img("1616486338812-3dadae4b4ace", 1600),
 };
 
