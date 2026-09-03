@@ -13,7 +13,7 @@ export default function Blog() {
   return (
     <div>
       <PageHero
-        overline="The LUXE Journal"
+        overline="The Monis Solution Journal"
         title="Notes on design, material & living well."
         subtitle="Insights, guides and stories from our studio — written for those who care about how a space feels."
         image={IMAGES.story}

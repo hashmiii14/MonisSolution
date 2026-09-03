@@ -47,7 +47,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="overline mb-6 text-luxe-gold"
         >
-          LUXE Interiors — London · New York · Milan
+          Monis Solution — Sector 44, Gurugram · New Delhi NCR
         </motion.p>
 
         <motion.h1

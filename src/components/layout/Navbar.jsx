@@ -61,11 +61,11 @@ export default function Navbar() {
           <Link
             to="/"
             data-testid="navbar-logo"
-            className={`font-display text-2xl tracking-tight transition-colors ${
+            className={`font-display text-xl sm:text-2xl tracking-tight transition-colors ${
               solid ? "text-luxe-ink" : "text-white"
             }`}
           >
-            LUXE<span className="text-luxe-gold">.</span>
+            MONIS SOLUTION<span className="text-luxe-gold">.</span>
           </Link>
 
           <ul className="hidden items-center gap-8 lg:flex">
@@ -120,8 +120,8 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] flex flex-col bg-luxe-bg px-6 py-6 lg:hidden"
           >
             <div className="flex items-center justify-between">
-              <span className="font-display text-2xl text-luxe-ink">
-                LUXE<span className="text-luxe-gold">.</span>
+              <span className="font-display text-xl sm:text-2xl text-luxe-ink">
+                MONIS SOLUTION<span className="text-luxe-gold">.</span>
               </span>
               <button
                 data-testid="mobile-menu-close"

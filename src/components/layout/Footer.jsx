@@ -19,11 +19,11 @@ export default function Footer() {
       <div className="luxe-container py-20 md:py-28">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link to="/" className="font-display text-3xl tracking-tight text-white">
-              LUXE<span className="text-luxe-gold">.</span>
+            <Link to="/" className="font-display text-2xl sm:text-3xl tracking-tight text-white">
+              MONIS SOLUTION<span className="text-luxe-gold">.</span>
             </Link>
             <p className="mt-6 max-w-xs leading-relaxed text-white/60">
-              An award-winning interior design studio crafting timeless, deeply personal spaces across the globe.
+              An award-winning luxury interior design & architecture studio crafting timeless, bespoke spaces in Sector 44, Gurugram, New Delhi NCR, and across India.
             </p>
             <div className="mt-8 flex gap-4">
               {[
@@ -69,15 +69,15 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-luxe-gold" />
-                12 Marylebone Lane, London, W1U 2NR
+                Sector 44, Gurugram, Haryana - 122003, New Delhi NCR, India
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-luxe-gold" />
-                +44 20 7123 4567
+                +91 98765 43210
               </li>
               <li className="flex gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-luxe-gold" />
-                studio@luxeinteriors.com
+                contact@monissolution.com
               </li>
             </ul>
           </div>
@@ -117,7 +117,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/50 md:flex-row">
-          <p>© {new Date().getFullYear()} LUXE INTERIORS. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} MONIS SOLUTION. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
             <a href="#" className="transition-colors hover:text-white">Terms</a>

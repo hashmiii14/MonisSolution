@@ -24,7 +24,7 @@ export default function FAQ() {
       <PageHero
         overline="Good to Know"
         title="Frequently asked questions."
-        subtitle="Everything you need to know about working with LUXE INTERIORS. Can't find an answer? Just ask."
+        subtitle="Everything you need to know about working with Monis Solution. Can't find an answer? Just ask."
         image={IMAGES.studio3}
         crumbs={[{ label: "FAQ" }]}
       />

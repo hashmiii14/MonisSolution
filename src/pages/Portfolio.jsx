@@ -13,7 +13,7 @@ export default function Portfolio() {
       <PageHero
         overline="Selected Work"
         title="A portfolio of quietly bold spaces."
-        subtitle="Residential, commercial and hospitality projects across three continents — each authored around its client."
+        subtitle="Residential, commercial and hospitality projects across New Delhi NCR and beyond — each authored around its client."
         image={IMAGES.heroSecondary}
         crumbs={[{ label: "Portfolio" }]}
       />

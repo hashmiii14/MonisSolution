@@ -104,12 +104,12 @@ export default function Home() {
                 {
                   n: "01",
                   t: "A studio, not a factory",
-                  d: "Founded in 2007, LUXE INTERIORS was built on the belief that a home should be authored — never assembled from a catalogue.",
+                  d: "Founded with a vision for refined spatial elegance, Monis Solution was built on the belief that a home should be authored — never assembled from a catalogue.",
                 },
                 {
                   n: "02",
                   t: "Craft above all",
-                  d: "We partner with master artisans across Europe, commissioning bespoke pieces made to outlast trends and generations.",
+                  d: "We partner with master craftsmen, stone artisans and ateliers across India, commissioning bespoke pieces made to outlast trends and generations.",
                 },
                 {
                   n: "03",
@@ -201,7 +201,7 @@ export default function Home() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div>
             <SectionHeading
-              overline="Why LUXE"
+              overline="Why Monis Solution"
               title="Reasons discerning clients choose us."
               className="mb-12"
             />
@@ -252,7 +252,7 @@ export default function Home() {
       <section className="relative flex min-h-[70vh] items-center overflow-hidden" data-testid="studio-feature">
         <img
           src={IMAGES.video}
-          alt="Inside the LUXE INTERIORS design studio"
+          alt="Inside the Monis Solution design studio"
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -264,7 +264,7 @@ export default function Home() {
               Where craft, light and material become a home.
             </h2>
             <p className="mt-5 leading-relaxed text-white/75">
-              Step behind the scenes of our Marylebone atelier — a space where mood boards, marble
+              Step behind the scenes of our Gurugram design atelier — a space where mood boards, marble
               samples and hand-drawn plans come together into interiors made to last generations.
             </p>
             <Link to="/about" data-testid="studio-feature-cta" className="btn-primary group mt-8 bg-luxe-gold hover:bg-white hover:text-luxe-ink">
@@ -289,7 +289,7 @@ export default function Home() {
       {/* Instagram gallery */}
       <section className="pb-24 md:pb-32" data-testid="instagram-gallery">
         <div className="luxe-container mb-10 text-center">
-          <p className="overline mb-3">@luxeinteriors</p>
+          <p className="overline mb-3">@monissolution</p>
           <h2 className="font-display text-3xl text-luxe-ink md:text-4xl">Follow the everyday details</h2>
         </div>
         <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-6">

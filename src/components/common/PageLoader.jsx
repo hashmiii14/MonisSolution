@@ -26,9 +26,9 @@ export default function PageLoader() {
             transition={{ duration: 0.7 }}
             className="text-center"
           >
-            <p className="overline mb-4">Interior Design Studio</p>
-            <h1 className="font-display text-4xl md:text-6xl tracking-tight text-luxe-ink">
-              LUXE<span className="text-luxe-gold">.</span>
+            <p className="overline mb-4">Interior & Architectural Design</p>
+            <h1 className="font-display text-3xl md:text-5xl tracking-tight text-luxe-ink">
+              MONIS SOLUTION<span className="text-luxe-gold">.</span>
             </h1>
           </motion.div>
           <div className="mt-8 h-[2px] w-40 overflow-hidden bg-luxe-border">

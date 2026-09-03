@@ -8,11 +8,11 @@ import Marquee from "@/components/common/Marquee";
 import { IMAGES, STATS, TEAM } from "@/data/content";
 
 const TIMELINE = [
-  { year: "2007", title: "The studio is founded", text: "Isabella Moreau opens a two-person studio in Marylebone with a single residential commission." },
-  { year: "2012", title: "First international project", text: "A villa in Lake Como marks our first project abroad — and our love affair with natural stone." },
-  { year: "2016", title: "Awarded Studio of the Year", text: "Recognised by the British Institute of Interior Design for a landmark penthouse." },
-  { year: "2020", title: "Hospitality division launches", text: "We expand into hotels and restaurants, opening a dedicated FF&E and procurement arm." },
-  { year: "2024", title: "480+ projects delivered", text: "A team of thirty designers now serves clients across London, New York and Milan." },
+  { year: "2012", title: "The studio is founded", text: "Monis Hashmi establishes a design studio in New Delhi NCR with a focus on bespoke residential architecture." },
+  { year: "2016", title: "First luxury villa delivery", text: "A sprawling private villa in Gurugram marks our signature integration of natural stone and spatial light." },
+  { year: "2019", title: "Design Excellence Award", text: "Recognised for landmark penthouse and luxury residential transformations across NCR." },
+  { year: "2021", title: "Commercial & Hospitality expansion", text: "We expand into corporate offices and boutique hospitality spaces with complete turnkey FF&E delivery." },
+  { year: "2024", title: "480+ projects delivered", text: "A multidisciplinary team now serves discerning homeowners and businesses across New Delhi, Gurugram, and pan-India." },
 ];
 
 const VALUES = [
@@ -28,7 +28,7 @@ export default function About() {
       <PageHero
         overline="Our Story"
         title="We craft interiors that feel inevitable."
-        subtitle="For nearly two decades, LUXE INTERIORS has designed spaces that balance architectural rigour with deep human warmth."
+        subtitle="For over a decade, Monis Solution has designed spaces that balance architectural rigour with deep human warmth."
         image={IMAGES.storyAlt}
         crumbs={[{ label: "About" }]}
       />
@@ -42,14 +42,14 @@ export default function About() {
           <SectionHeading overline="Who We Are" title="A studio built on quiet obsession." className="mb-6" />
           <div className="space-y-5 leading-relaxed text-luxe-soft">
             <p>
-              LUXE INTERIORS began in 2007 with a single belief: that a well-designed space can change how it feels
-              to be alive in it. What started as a two-person atelier in Marylebone has grown into a thirty-strong
-              studio delivering residential, commercial and hospitality projects across three continents.
+              Monis Solution began with a single belief: that a well-designed space can change how it feels
+              to be alive in it. What started as an architectural atelier in New Delhi NCR has grown into a premier
+              studio delivering residential, commercial and turnkey hospitality projects across India.
             </p>
             <p>
               We are not interested in trends for their own sake. Instead, we design interiors that feel timeless and
-              personal — spaces authored around your rituals, your collections and the way light moves through your
-              rooms. Every project is led end-to-end by a dedicated designer, protecting both vision and craft.
+              personal — spaces authored around your rituals, your family, and the way light moves through your
+              rooms. Based in Sector 44, Gurugram, every project is led end-to-end by a dedicated designer, protecting both vision and craft.
             </p>
           </div>
           <Link to="/team" className="btn-outline group mt-8">

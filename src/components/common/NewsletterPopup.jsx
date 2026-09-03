@@ -68,7 +68,7 @@ export default function NewsletterPopup() {
                 </div>
               ) : (
                 <>
-                  <p className="overline mb-3">The LUXE Journal</p>
+                  <p className="overline mb-3">The Monis Solution Journal</p>
                   <h3 className="font-display text-3xl md:text-4xl leading-tight text-luxe-ink">
                     Design notes, delivered quietly.
                   </h3>
