@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --luxe-bg: #fdfbf7;
+    --luxe-bg-secondary: #f4f1ea;
+    --luxe-ink: #1a1a1a;
+    --luxe-ink-soft: #4a4a4a;
+    --luxe-muted: #8c8c8c;
+    --luxe-gold: #c19a6b;
+    --luxe-gold-hover: #a88354;
+    --luxe-charcoal: #222222;
+    --luxe-border: #eae5d9;
+    --luxe-border-dark: #d1cbbf;
+}
+
+@layer base {
+    :root {
+        --background: 44 43% 98%;
+        --foreground: 0 0% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 10%;
+        --primary: 0 0% 13%;
+        --primary-foreground: 44 43% 98%;
+        --secondary: 40 27% 93%;
+        --secondary-foreground: 0 0% 13%;
+        --muted: 40 27% 93%;
+        --muted-foreground: 0 0% 55%;
+        --accent: 33 40% 59%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 42 30% 89%;
+        --input: 42 30% 89%;
+        --ring: 33 40% 59%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+        overflow-x: clip;
+    }
+    body {
+        margin: 0;
+        max-width: 100%;
+        background-color: var(--luxe-bg);
+        color: var(--luxe-ink);
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: clip;
+    }
+    #root,
+    .App {
+        overflow-x: clip;
+        max-width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+    }
+    ::selection {
+        background: var(--luxe-gold);
+        color: #fff;
+    }
+}
+
+@layer components {
+    .font-display {
+        font-family: "Playfair Display", serif;
+    }
+    .font-body {
+        font-family: "Poppins", sans-serif;
+    }
+    .overline {
+        @apply font-body text-xs md:text-sm font-medium uppercase tracking-[0.25em] text-[color:var(--luxe-gold)];
+    }
+    .luxe-container {
+        @apply mx-auto w-full max-w-[1400px] px-6 md:px-12;
+    }
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 bg-[color:var(--luxe-charcoal)] px-8 py-4 text-sm font-medium uppercase tracking-[0.15em] text-white transition-colors duration-300 hover:bg-[color:var(--luxe-gold)];
+    }
+    .btn-outline {
+        @apply inline-flex items-center justify-center gap-2 border border-[color:var(--luxe-ink)] px-8 py-4 text-sm font-medium uppercase tracking-[0.15em] text-[color:var(--luxe-ink)] transition-colors duration-300 hover:bg-[color:var(--luxe-ink)] hover:text-white;
+    }
+    .link-underline {
+        position: relative;
+    }
+    .link-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 1px;
+        width: 0;
+        background: currentColor;
+        transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .link-underline:hover::after {
+        width: 100%;
+    }
+}
+
+/* Marquee */
+@keyframes luxe-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.animate-marquee {
+    animation: luxe-marquee 30s linear infinite;
+    will-change: transform;
+}
+.marquee-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--luxe-ink);
+}
+
+/* Elegant thin scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background: var(--luxe-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--luxe-border-dark);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--luxe-gold);
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.ease-luxe {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Keep the toast container within the viewport on small screens */
+[data-sonner-toaster] {
+    max-width: 100vw;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}
