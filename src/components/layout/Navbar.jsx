@@ -87,23 +87,23 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-4">
             <Link
               to="/contact"
               data-testid="navbar-contact-cta"
-              className={`inline-flex text-xs font-medium uppercase tracking-[0.15em] transition-colors px-3.5 py-2 sm:px-6 sm:py-2.5 ${
+              className={`hidden text-xs font-medium uppercase tracking-[0.15em] transition-colors lg:inline-flex px-6 py-3 ${
                 solid
                   ? "bg-luxe-charcoal text-white hover:bg-luxe-gold"
                   : "border border-white/60 text-white hover:bg-white hover:text-luxe-ink"
               }`}
             >
-              Contact
+              Book Consultation
             </Link>
             <button
               data-testid="mobile-menu-toggle"
               aria-label="Open menu"
               onClick={() => setOpen(true)}
-              className={`lg:hidden ${solid ? "text-luxe-ink" : "text-white"}`}
+              className={`p-1 lg:hidden ${solid ? "text-luxe-ink" : "text-white"}`}
             >
               <Menu className="h-6 w-6" />
             </button>
@@ -151,6 +151,11 @@ export default function Navbar() {
                 </motion.li>
               ))}
             </ul>
+
+            <div className="mt-auto pt-6 border-t border-luxe-border">
+              <p className="overline text-luxe-gold mb-1">Monis Solution</p>
+              <p className="text-xs text-luxe-soft">Sector 44, Gurugram · +91 98180 83436</p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
