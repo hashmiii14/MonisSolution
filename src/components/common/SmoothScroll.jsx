@@ -1,14 +1,23 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-// Global smooth momentum scrolling via Lenis.
+// Global smooth momentum scrolling via Lenis with touch device bypass for zero mobile lag.
 export default function SmoothScroll({ children }) {
   useEffect(() => {
+    // Avoid touch hijacking on mobile devices so mobile uses native 120Hz GPU scrolling
+    const isTouch =
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0 || window.innerWidth < 768);
+
+    if (isTouch) {
+      return;
+    }
+
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 0.85,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      touchMultiplier: 1.5,
+      syncTouch: false,
     });
 
     let rafId;

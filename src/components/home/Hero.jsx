@@ -16,7 +16,7 @@ const lineVariant = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-end overflow-hidden pt-20" data-testid="hero">
+    <section className="relative flex min-h-screen items-end overflow-hidden" data-testid="hero">
       {/* High-performance GPU-composited background without scroll lag */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img

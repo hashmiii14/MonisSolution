@@ -20,7 +20,7 @@ export default function Navbar() {
   const isHome = location.pathname === "/";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -43,17 +43,17 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // Consistent luxury frosted glass header across all pages including Home
-  const solid = true;
+  // Transparent at start on home page, transitions to white frosted glass on scroll
+  const solid = scrolled || !isHome;
 
   return (
     <>
       <header
         data-testid="navbar"
-        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 border-b border-luxe-border/80 ${
-          scrolled
-            ? "bg-white/95 py-3.5 shadow-md backdrop-blur-xl"
-            : "bg-white/85 py-4 shadow-sm backdrop-blur-xl backdrop-saturate-150"
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ease-in-out ${
+          solid
+            ? "border-b border-luxe-border/80 bg-white/95 py-3.5 shadow-md backdrop-blur-xl"
+            : "bg-gradient-to-b from-black/60 via-black/20 to-transparent py-5 sm:py-6"
         }`}
       >
         <nav className="luxe-container flex items-center justify-between">
