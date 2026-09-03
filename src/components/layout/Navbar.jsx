@@ -12,6 +12,7 @@ const LINKS = [
   { to: "/pricing", label: "Pricing" },
   { to: "/blog", label: "Journal" },
   { to: "/faq", label: "FAQ" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -86,11 +87,11 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <Link
               to="/contact"
               data-testid="navbar-contact-cta"
-              className={`hidden text-sm font-medium uppercase tracking-[0.15em] transition-colors md:inline-flex px-6 py-3 ${
+              className={`inline-flex text-xs font-medium uppercase tracking-[0.15em] transition-colors px-3.5 py-2 sm:px-6 sm:py-2.5 ${
                 solid
                   ? "bg-luxe-charcoal text-white hover:bg-luxe-gold"
                   : "border border-white/60 text-white hover:bg-white hover:text-luxe-ink"
@@ -132,8 +133,8 @@ export default function Navbar() {
                 <X className="h-6 w-6" />
               </button>
             </div>
-            <ul className="mt-12 flex flex-col gap-2">
-              {[...LINKS, { to: "/contact", label: "Contact" }].map((l, i) => (
+            <ul className="mt-10 flex flex-col gap-2 overflow-y-auto">
+              {LINKS.map((l, i) => (
                 <motion.li
                   key={l.to}
                   initial={{ opacity: 0, x: 30 }}

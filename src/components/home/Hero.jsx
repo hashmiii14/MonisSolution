@@ -1,6 +1,5 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { IMAGES } from "@/data/content";
 
@@ -16,29 +15,18 @@ const lineVariant = {
 };
 
 export default function Hero() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.45, 0.75]);
-
   return (
-    <section ref={ref} className="relative flex min-h-screen items-end overflow-hidden" data-testid="hero">
-      <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
+    <section className="relative flex min-h-screen items-end overflow-hidden" data-testid="hero">
+      {/* High-performance GPU-composited background without scroll lag */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img
           src={IMAGES.heroPrimary}
-          alt="Luxury interior living space with warm natural light"
+          alt="Luxury interior design by Monis Solution Sector 44 Gurugram"
           fetchPriority="high"
-          className="h-[115%] w-full object-cover"
+          className="h-full w-full object-cover object-center"
         />
-      </motion.div>
-      <motion.div
-        style={{ opacity: overlayOpacity }}
-        className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/30 to-luxe-ink/40"
-      />
+        <div className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/40 to-luxe-ink/50" />
+      </div>
 
       <div className="luxe-container relative z-10 w-full pb-16 md:pb-24">
         <motion.p

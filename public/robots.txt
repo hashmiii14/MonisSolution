@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://design-showcase-live-2.preview.emergentagent.com/sitemap.xml
+Sitemap: https://monis-solution.vercel.app/sitemap.xml

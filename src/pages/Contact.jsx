@@ -24,7 +24,7 @@ export default function Contact() {
 
   const info = [
     { icon: MapPin, label: "Visit the Studio", value: "Sector 44, Gurugram, Haryana - 122003, New Delhi NCR, India" },
-    { icon: Phone, label: "Call Us", value: "+91 98765 43210" },
+    { icon: Phone, label: "Call Us", value: "+91 98180 83436" },
     { icon: Mail, label: "Email", value: "contact@monissolution.com" },
     { icon: Clock, label: "Studio Hours", value: "Mon–Sat, 10am–7pm IST" },
   ];
@@ -79,7 +79,7 @@ export default function Contact() {
                     value={form.phone}
                     onChange={update("phone")}
                     className="w-full border-b border-luxe-border bg-transparent py-3 text-luxe-ink outline-none focus:border-luxe-gold"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 98180 83436"
                   />
                 </div>
                 <div>
@@ -134,7 +134,7 @@ export default function Contact() {
               ))}
 
               <a
-                href="https://wa.me/919876543210?text=Hello%20Monis%20Solution%2C%20I%27d%20like%20to%20discuss%20an%20interior%20design%20project."
+                href="https://wa.me/919818083436?text=Hello%20Monis%20Solution%2C%20I%27d%20like%20to%20discuss%20an%20interior%20design%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="contact-whatsapp-link"

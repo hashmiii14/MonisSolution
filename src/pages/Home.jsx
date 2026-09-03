@@ -6,7 +6,6 @@ import SectionHeading from "@/components/common/SectionHeading";
 import Reveal, { Stagger, StaggerItem } from "@/components/common/Reveal";
 import Counter from "@/components/common/Counter";
 import ProjectCard from "@/components/common/ProjectCard";
-import BeforeAfter from "@/components/home/BeforeAfter";
 import TestimonialSlider from "@/components/home/TestimonialSlider";
 import {
   SERVICES,
@@ -219,12 +218,19 @@ export default function Home() {
               ))}
             </Stagger>
           </div>
-          <Reveal variant="right">
-            <p className="overline mb-4">Before / After</p>
-            <h3 className="mb-6 font-display text-2xl text-luxe-ink md:text-3xl">
-              Drag to reveal the transformation.
-            </h3>
-            <BeforeAfter before={IMAGES.beforeImg} after={IMAGES.afterImg} />
+          <Reveal variant="right" className="relative overflow-hidden">
+            <div className="overflow-hidden border border-luxe-border shadow-xl">
+              <img
+                src={IMAGES.afterImg}
+                alt="Bespoke luxury interior transformation by Monis Solution"
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            <div className="mt-4 flex items-center justify-between text-xs uppercase tracking-[0.15em] text-luxe-muted">
+              <span>Bespoke Architectural Craft</span>
+              <span>Sector 44, Gurugram</span>
+            </div>
           </Reveal>
         </div>
       </section>
