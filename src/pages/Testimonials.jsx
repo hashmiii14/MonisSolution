@@ -17,14 +17,14 @@ export default function Testimonials() {
       />
 
       {/* Featured slider */}
-      <section className="bg-luxe-charcoal py-24 md:py-32">
+      <section className="bg-luxe-charcoal py-16 md:py-20">
         <div className="luxe-container">
           <TestimonialSlider testimonials={TESTIMONIALS.slice(0, 6)} dark />
         </div>
       </section>
 
       {/* Grid of cards */}
-      <section className="luxe-container py-24 md:py-32">
+      <section className="luxe-container py-14 md:py-20">
         <SectionHeading overline="More Reviews" title="Every project, a lasting relationship." align="center" className="mb-16" />
         <Stagger className="columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6">
           {TESTIMONIALS.map((t, i) => (

@@ -16,8 +16,8 @@ export default function Services() {
         crumbs={[{ label: "Services" }]}
       />
 
-      <section className="luxe-container py-24 md:py-32">
-        <div className="space-y-24 md:space-y-32">
+      <section className="luxe-container py-14 md:py-20">
+        <div className="space-y-16 md:space-y-20">
           {SERVICES.map((s, i) => (
             <div
               key={s.slug}
@@ -71,7 +71,7 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="bg-luxe-cream py-24 md:py-32">
+      <section className="bg-luxe-cream py-14 md:py-20">
         <div className="luxe-container">
           <SectionHeading overline="Our Approach" title="Every service follows the same calm rhythm." align="center" className="mb-16" />
           <div className="grid grid-cols-1 gap-px overflow-hidden border border-luxe-border bg-luxe-border md:grid-cols-2 lg:grid-cols-4">

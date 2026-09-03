@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Toaster } from "@/components/ui/sonner";
@@ -73,6 +73,21 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  useEffect(() => {
+    try {
+      const navEntries = performance.getEntriesByType("navigation");
+      const isReload =
+        (navEntries.length > 0 && navEntries[0].type === "reload") ||
+        (window.performance && window.performance.navigation && window.performance.navigation.type === 1);
+
+      if (isReload && window.location.pathname !== "/") {
+        window.location.replace("/");
+      }
+    } catch (e) {
+      // Graceful fallback
+    }
+  }, []);
+
   return (
     <div className="App">
       <PageLoader />

@@ -45,11 +45,11 @@ export default function Hero() {
           className="max-w-5xl font-display text-4xl leading-[1.02] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
         >
           {LINES.map((line, i) => (
-            <span key={i} className="block overflow-hidden py-1">
+            <span key={i} className="block overflow-hidden py-2.5 pr-6 -mr-6">
               <motion.span variants={lineVariant} className="block">
                 {i === 2 ? (
                   <span>
-                    quiet <span className="italic text-luxe-gold">luxury.</span>
+                    quiet <span className="italic text-luxe-gold pr-3 inline-block">luxury</span>
                   </span>
                 ) : (
                   line

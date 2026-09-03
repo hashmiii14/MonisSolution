@@ -34,7 +34,7 @@ export default function About() {
       />
 
       {/* Story */}
-      <section className="luxe-container grid grid-cols-1 items-center gap-14 py-24 md:py-32 lg:grid-cols-2">
+      <section className="luxe-container grid grid-cols-1 items-center gap-14 py-14 md:py-20 lg:grid-cols-2">
         <Reveal variant="left">
           <img src={IMAGES.story} alt="Studio" className="w-full object-cover" loading="lazy" />
         </Reveal>
@@ -60,7 +60,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-luxe-cream py-24 md:py-32">
+      <section className="bg-luxe-cream py-14 md:py-20">
         <div className="luxe-container grid grid-cols-1 gap-8 md:grid-cols-2">
           {[
             { icon: Target, label: "Our Mission", title: "To craft spaces that elevate everyday life.", text: "We translate how you live into interiors of lasting beauty — considered, tactile and unmistakably yours." },
@@ -77,7 +77,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="luxe-container py-24 md:py-32">
+      <section className="luxe-container py-14 md:py-20">
         <SectionHeading overline="Our Journey" title="Milestones along the way." align="center" className="mb-16" />
         <div className="relative mx-auto max-w-3xl">
           <div className="absolute left-[7px] top-2 h-full w-px bg-luxe-border md:left-1/2" />
@@ -117,7 +117,7 @@ export default function About() {
       </section>
 
       {/* Studio gallery */}
-      <section className="luxe-container py-24 md:py-32">
+      <section className="luxe-container py-14 md:py-20">
         <SectionHeading overline="Inside the Studio" title="Where ideas take shape." className="mb-12" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[IMAGES.studio1, IMAGES.studio2, IMAGES.studio3, IMAGES.studio4].map((src, i) => (
@@ -129,7 +129,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="bg-luxe-cream py-24 md:py-32">
+      <section className="bg-luxe-cream py-14 md:py-20">
         <div className="luxe-container">
           <SectionHeading overline="Our Values" title="The principles behind every project." align="center" className="mb-16" />
           <Stagger className="grid grid-cols-1 gap-px overflow-hidden border border-luxe-border bg-luxe-border sm:grid-cols-2 lg:grid-cols-4">

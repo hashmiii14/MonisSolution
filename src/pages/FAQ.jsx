@@ -29,7 +29,7 @@ export default function FAQ() {
         crumbs={[{ label: "FAQ" }]}
       />
 
-      <section className="luxe-container max-w-3xl py-24 md:py-32">
+      <section className="luxe-container max-w-3xl py-14 md:py-20">
         <div className="relative mb-12">
           <Search className="absolute left-0 top-1/2 h-5 w-5 -translate-y-1/2 text-luxe-muted" />
           <input
