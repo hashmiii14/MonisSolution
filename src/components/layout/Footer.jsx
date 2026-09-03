@@ -50,10 +50,10 @@ export default function Footer() {
               {[
                 ["About", "/about"],
                 ["Services", "/services"],
-                ["Portfolio", "/portfolio"],
-                ["Team", "/team"],
                 ["Pricing", "/pricing"],
                 ["Journal", "/blog"],
+                ["FAQ", "/faq"],
+                ["Contact", "/contact"],
               ].map(([label, to]) => (
                 <li key={to}>
                   <Link to={to} className="link-underline text-sm transition-colors hover:text-white">

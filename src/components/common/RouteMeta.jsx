@@ -12,8 +12,6 @@ const META = {
   },
   "/about": { title: `About Us — ${SITE}`, desc: "For over a decade Monis Solution has designed interiors that balance architectural rigour with deep human warmth. Discover our story, mission and values." },
   "/services": { title: `Interior Design Services — ${SITE}`, desc: "Full-service interior design: residential, commercial, luxury villas, hospitality, modular kitchens, lighting, FF&E, and turnkey renovation." },
-  "/portfolio": { title: `Portfolio — ${SITE}`, desc: "Explore our portfolio of quietly bold residential, villa and commercial interiors delivered across New Delhi NCR and India." },
-  "/team": { title: `Our Team — ${SITE}`, desc: "Meet the designers, architects and project directors behind Monis Solution — united by an obsession with craft." },
   "/pricing": { title: `Pricing & Packages — ${SITE}`, desc: "Transparent interior design packages in INR — Starter, Premium, Luxury and Enterprise — with a clear comparison of what's included." },
   "/testimonials": { title: `Client Testimonials — ${SITE}`, desc: "Read what homeowners, business leaders and hoteliers say about working with Monis Solution." },
   "/blog": { title: `The Monis Solution Journal — Interior Design Insights`, desc: "Design notes, guides and stories on luxury interiors, Indian stone, lighting and living well from the Monis Solution studio." },

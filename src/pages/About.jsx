@@ -5,7 +5,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import Reveal, { Stagger, StaggerItem } from "@/components/common/Reveal";
 import Counter from "@/components/common/Counter";
 import Marquee from "@/components/common/Marquee";
-import { IMAGES, STATS, TEAM } from "@/data/content";
+import { IMAGES, STATS } from "@/data/content";
 
 const TIMELINE = [
   { year: "2012", title: "The studio is founded", text: "Monis Hashmi establishes a design studio in New Delhi NCR with a focus on bespoke residential architecture." },
@@ -52,8 +52,8 @@ export default function About() {
               rooms. Based in Sector 44, Gurugram, every project is led end-to-end by a dedicated designer, protecting both vision and craft.
             </p>
           </div>
-          <Link to="/team" className="btn-outline group mt-8">
-            Meet the Team
+          <Link to="/services" className="btn-outline group mt-8">
+            Explore Services
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -141,27 +141,6 @@ export default function About() {
               </StaggerItem>
             ))}
           </Stagger>
-        </div>
-      </section>
-
-      {/* Team preview */}
-      <section className="luxe-container py-24 md:py-32">
-        <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <SectionHeading overline="The People" title="Meet a few of our designers." />
-          <Link to="/team" className="btn-outline group whitespace-nowrap">
-            Full Team <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-          {TEAM.slice(0, 4).map((m, i) => (
-            <Reveal key={m.name} delay={i * 0.08}>
-              <div className="overflow-hidden">
-                <img src={m.image} alt={m.name} loading="lazy" className="aspect-[3/4] w-full object-cover transition-transform duration-700 hover:scale-105" />
-              </div>
-              <h3 className="mt-4 font-display text-lg text-luxe-ink">{m.name}</h3>
-              <p className="text-sm text-luxe-gold">{m.role}</p>
-            </Reveal>
-          ))}
         </div>
       </section>
 

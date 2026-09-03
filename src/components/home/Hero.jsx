@@ -75,8 +75,8 @@ export default function Hero() {
           transition={{ delay: 1.3, duration: 0.8 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <Link to="/portfolio" data-testid="hero-primary-cta" className="btn-primary group">
-            View Our Work
+          <Link to="/services" data-testid="hero-primary-cta" className="btn-primary group">
+            Explore Services
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           <Link

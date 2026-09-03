@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Toaster } from "@/components/ui/sonner";
 import "@/index.css";
@@ -56,9 +56,9 @@ function AnimatedRoutes() {
           <Route index element={<Page><Home /></Page>} />
           <Route path="about" element={<Page><Suspense fallback={<RouteFallback />}><About /></Suspense></Page>} />
           <Route path="services" element={<Page><Suspense fallback={<RouteFallback />}><Services /></Suspense></Page>} />
-          <Route path="portfolio" element={<Page><Suspense fallback={<RouteFallback />}><Portfolio /></Suspense></Page>} />
-          <Route path="portfolio/:slug" element={<Page><Suspense fallback={<RouteFallback />}><ProjectDetail /></Suspense></Page>} />
-          <Route path="team" element={<Page><Suspense fallback={<RouteFallback />}><Team /></Suspense></Page>} />
+          <Route path="portfolio" element={<Navigate to="/services" replace />} />
+          <Route path="portfolio/:slug" element={<Navigate to="/services" replace />} />
+          <Route path="team" element={<Navigate to="/about" replace />} />
           <Route path="pricing" element={<Page><Suspense fallback={<RouteFallback />}><Pricing /></Suspense></Page>} />
           <Route path="testimonials" element={<Page><Suspense fallback={<RouteFallback />}><Testimonials /></Suspense></Page>} />
           <Route path="blog" element={<Page><Suspense fallback={<RouteFallback />}><Blog /></Suspense></Page>} />

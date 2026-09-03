@@ -5,11 +5,9 @@ import Marquee from "@/components/common/Marquee";
 import SectionHeading from "@/components/common/SectionHeading";
 import Reveal, { Stagger, StaggerItem } from "@/components/common/Reveal";
 import Counter from "@/components/common/Counter";
-import ProjectCard from "@/components/common/ProjectCard";
 import TestimonialSlider from "@/components/home/TestimonialSlider";
 import {
   SERVICES,
-  PROJECTS,
   STATS,
   PROCESS,
   WHY,
@@ -20,7 +18,6 @@ import {
 
 export default function Home() {
   const featuredServices = SERVICES.slice(0, 5);
-  const featuredProjects = PROJECTS.slice(0, 6);
   const instaGrid = [IMAGES.studio1, IMAGES.studio2, IMAGES.studio3, IMAGES.studio4, IMAGES.story, IMAGES.storyAlt];
 
   return (
@@ -145,26 +142,6 @@ export default function Home() {
               </p>
               <p className="mt-3 text-sm uppercase tracking-[0.15em] text-white/60">{s.label}</p>
             </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="luxe-container py-24 md:py-32" data-testid="featured-projects">
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <SectionHeading overline="Selected Work" title="A portfolio of quietly bold spaces." />
-          <Reveal variant="fade" delay={0.2}>
-            <Link to="/portfolio" className="btn-outline group whitespace-nowrap">
-              View Portfolio
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Reveal>
-        </div>
-        <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6">
-          {featuredProjects.map((p) => (
-            <div key={p.slug} className="break-inside-avoid">
-              <ProjectCard project={p} />
-            </div>
           ))}
         </div>
       </section>
@@ -330,10 +307,10 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                to="/portfolio"
+                to="/services"
                 className="inline-flex items-center justify-center gap-2 border border-white/40 px-8 py-4 text-sm font-medium uppercase tracking-[0.15em] text-white transition-colors hover:bg-white hover:text-luxe-ink"
               >
-                Browse Work
+                Our Services
               </Link>
             </div>
           </Reveal>
