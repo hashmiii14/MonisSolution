@@ -41,7 +41,7 @@ function RouteFallback() {
   return (
     <div className="flex min-h-[70vh] items-center justify-center bg-luxe-bg" aria-busy="true">
       <span className="font-display text-2xl md:text-3xl tracking-tight text-luxe-ink">
-        MONIS SOLUTION<span className="text-luxe-gold">.</span>
+        MONIS SOLUTION
       </span>
     </div>
   );

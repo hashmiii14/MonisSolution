@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link to="/" className="font-display text-2xl sm:text-3xl tracking-tight text-white">
-              MONIS SOLUTION<span className="text-luxe-gold">.</span>
+              MONIS SOLUTION
             </Link>
             <p className="mt-6 max-w-xs leading-relaxed text-white/60">
               An award-winning luxury interior design & architecture studio crafting timeless, bespoke spaces in Sector 44, Gurugram, New Delhi NCR, and across India.

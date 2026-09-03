@@ -28,7 +28,7 @@ export default function PageLoader() {
           >
             <p className="overline mb-4">Interior & Architectural Design</p>
             <h1 className="font-display text-3xl md:text-5xl tracking-tight text-luxe-ink">
-              MONIS SOLUTION<span className="text-luxe-gold">.</span>
+              MONIS SOLUTION
             </h1>
           </motion.div>
           <div className="mt-8 h-[2px] w-40 overflow-hidden bg-luxe-border">

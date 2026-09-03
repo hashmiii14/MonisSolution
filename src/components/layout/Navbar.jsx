@@ -66,7 +66,7 @@ export default function Navbar() {
               solid ? "text-luxe-ink" : "text-white"
             }`}
           >
-            MONIS SOLUTION<span className="text-luxe-gold">.</span>
+            MONIS SOLUTION
           </Link>
 
           <ul className="hidden items-center gap-8 lg:flex">
@@ -118,33 +118,34 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] flex flex-col bg-luxe-bg px-6 py-6 lg:hidden"
+            className="fixed inset-0 z-[60] flex flex-col bg-luxe-bg px-6 py-5 lg:hidden"
           >
-            <div className="flex items-center justify-between">
-              <span className="font-display text-xl sm:text-2xl text-luxe-ink">
-                MONIS SOLUTION<span className="text-luxe-gold">.</span>
+            <div className="flex items-center justify-between shrink-0 pb-3 border-b border-luxe-border/60">
+              <span className="font-display text-xl sm:text-2xl tracking-tight text-luxe-ink">
+                MONIS SOLUTION
               </span>
               <button
                 data-testid="mobile-menu-close"
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
-                className="text-luxe-ink"
+                className="p-1.5 text-luxe-ink hover:text-luxe-gold transition-colors"
               >
                 <X className="h-6 w-6" />
               </button>
             </div>
-            <ul className="mt-10 flex flex-col gap-2 overflow-y-auto">
+
+            <ul className="flex-1 min-h-0 overflow-y-auto overscroll-contain py-2 divide-y divide-luxe-border/40">
               {LINKS.map((l, i) => (
                 <motion.li
                   key={l.to}
-                  initial={{ opacity: 0, x: 30 }}
+                  initial={{ opacity: 0, x: 25 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * i }}
+                  transition={{ delay: 0.03 * i }}
                 >
                   <NavLink
                     to={l.to}
                     data-testid={`mobile-nav-link-${l.label.toLowerCase()}`}
-                    className="block border-b border-luxe-border py-4 font-display text-3xl text-luxe-ink"
+                    className="block py-2.5 font-display text-2xl text-luxe-ink transition-colors hover:text-luxe-gold"
                   >
                     {l.label}
                   </NavLink>
@@ -152,9 +153,9 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <div className="mt-auto pt-6 border-t border-luxe-border">
-              <p className="overline text-luxe-gold mb-1">Monis Solution</p>
-              <p className="text-xs text-luxe-soft">Sector 44, Gurugram · +91 98180 83436</p>
+            <div className="shrink-0 pt-3 border-t border-luxe-border/60">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-luxe-gold">Monis Solution</p>
+              <p className="text-xs text-luxe-soft mt-0.5">Sector 44, Gurugram · +91 98180 83436</p>
             </div>
           </motion.div>
         )}
