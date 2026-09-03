@@ -43,17 +43,17 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // On non-home pages the hero is not dark, so use solid style from the start.
-  const solid = scrolled || !isHome;
+  // Consistent luxury frosted glass header across all pages including Home
+  const solid = true;
 
   return (
     <>
       <header
         data-testid="navbar"
-        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
-          solid
-            ? "border-b border-luxe-border bg-white/80 py-4 backdrop-blur-xl backdrop-saturate-150"
-            : "py-6"
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 border-b border-luxe-border/80 ${
+          scrolled
+            ? "bg-white/95 py-3.5 shadow-md backdrop-blur-xl"
+            : "bg-white/85 py-4 shadow-sm backdrop-blur-xl backdrop-saturate-150"
         }`}
       >
         <nav className="luxe-container flex items-center justify-between">

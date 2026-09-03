@@ -16,7 +16,7 @@ const lineVariant = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-end overflow-hidden" data-testid="hero">
+    <section className="relative flex min-h-screen items-end overflow-hidden pt-20" data-testid="hero">
       {/* High-performance GPU-composited background without scroll lag */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img
@@ -25,7 +25,7 @@ export default function Hero() {
           fetchPriority="high"
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/40 to-luxe-ink/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-luxe-ink via-luxe-ink/35 to-transparent" />
       </div>
 
       <div className="luxe-container relative z-10 w-full pb-16 md:pb-24">
